@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylecss.css">
+  <style>
+    body {
+      background-color: rgb(105, 33, 105);
+    }
+  </style>
+</head>
+
+<body class="xyz">
+
+  <h2 style="text-align: center;">Contact Form</h3>
+
+    <div class="container formback">
+      <form name="myform" action="/index.html" method="GET" onsubmit="return validateForm() ">
+        <label for="fname">First Name</label>
+        <input type="text"  name="firstname" placeholder="Your name.." >
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
+
+        <label for="country">Country</label>
+        <select id="country" name="country" >
+          <option value="australia">India</option>
+          <option value="canada">America</option>
+          <option value="usa">London</option>
+          <option value="france">France</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject"  name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <p id="submitt">
+          <input type="submit" value="Submit" >
+        </p>
+      </form>
+    </div>
+<script>
+  function validateForm()  { 
+    var x = document.forms["myform"]["firstname"].value;
+    var y = document.forms["myform"]["lastname"].value;
+    var z = document.forms["myform"]["country"].value;
+    var w = document.forms["myform"]["subject"].value;
+  if((x == "")||(y =="")||(z =="")||(w=="")) {
+        alert("Please fill all the information"); 
+    return false;
+
+  }
+
+  else
+  {
+
+    alert("Thanks for your valuable feedback")
+  }
+  }
+</script>
+</body>
+
+</html>
